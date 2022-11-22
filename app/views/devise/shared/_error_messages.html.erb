@@ -1,7 +1,7 @@
 <% if resource.errors.any? %>
   <div class="alert alert-danger" id="error_explanation">
     <h3>
-      <%= t('errors.messages.not_saved', errors: t(:error, count: resource.errors.count)) %>:
+      <%= t('messages.not_saved', errors: t(:error, count: resource.errors.count)) %>:
     </h3>
     <ul>
       <% resource.errors.to_a.each do |message| %>

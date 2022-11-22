@@ -60,6 +60,10 @@ ru:
     create: 'Создать событие'
     new: 'Новое событие'
 
-  errors:
-    messages:
-      not_saved: 'Сохранение невозможно'
+  error:
+    one: '%{count} ошибки'
+    few: '%{count} ошибок'
+    many: '%{count} ошибок'
+
+  messages:
+    not_saved: 'Не удалось сохранить из-за %{errors}'
