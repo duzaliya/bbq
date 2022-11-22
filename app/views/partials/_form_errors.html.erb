@@ -1,0 +1,14 @@
+<% errors = model.errors %>
+
+<% if errors.any? %>
+  <div class="alert alert-danger" id="error_explanation">
+    <h3>
+      <%= t('errors.messages.not_saved', errors: t(:error, count: errors.count)) %>:
+    </h3>
+    <ul>
+      <% errors.to_a.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

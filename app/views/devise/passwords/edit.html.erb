@@ -1,4 +1,4 @@
-<h2>Смена пароля</h2>
+<h2><%= t('devise.passwords.change_password') %></h2>
 
 <div class="row">
   <div class="col-6">
@@ -7,20 +7,20 @@
       <%= f.hidden_field :reset_password_token %>
 
       <div class="mt-2">
-        <%= f.label :password, 'Новый пароль' %><br/>
+        <%= f.label :password, class: 'mb-1' %>
         <% if @minimum_password_length %>
-          <em>(минимум <%= @minimum_password_length %> символов</em><br/>
+          <em><%= t('minimum_characters', length: @minimum_password_length) %></em>
         <% end %>
         <%= f.password_field :password, autofocus: true, autocomplete: 'new-password', class: 'form-control' %>
       </div>
 
-      <div class="mt-3">
-        <%= f.label :password_confirmation, 'Подтвердите новый пароль' %><br/>
+      <div class="mt-2">
+        <%= f.label :password_confirmation, class: 'mb-1' %>
         <%= f.password_field :password_confirmation, autocomplete: 'new-password', class: 'form-control' %>
       </div>
 
       <div class="actions mt-3">
-        <%= f.submit 'Изменить пароль', class: 'btn btn-primary' %>
+        <%= f.submit t('devise.passwords.change_password'), class: 'btn btn-primary' %>
       </div>
     <% end %>
   </div>

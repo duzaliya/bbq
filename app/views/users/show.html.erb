@@ -5,20 +5,20 @@
 
   <% if @user == current_user %>
     <p class="mt-4">
-      <%= link_to 'Редактировать профиль', edit_user_path(@user),
+      <%= link_to t('users.edit'), edit_user_path(@user),
                   class: 'btn btn-primary' %>
     </p>
   <% end %>
 
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-12">
       <% if @user.events.any? %>
-        <h3>Организовал:</h3>
+        <h3><%= t('users.organized') %></h3>
         <div class="row">
           <%= render partial: 'events/event', collection: @user.events %>
         </div>
       <% else %>
-        <p class="mt-4">Пользователь пока не организовал ни одного события</p>
+        <p class="mt-4"><%= t('users.no_organized') %></p>
       <% end %>
     </div>
   </div>

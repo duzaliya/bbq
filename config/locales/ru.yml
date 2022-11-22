@@ -1,0 +1,65 @@
+ru:
+  activerecord:
+    models:
+      user: 'Пользователь'
+      event: 'Событие'
+
+    attributes:
+      user:
+        email: 'Email'
+        name: 'Имя'
+        avatar: 'Аватар'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+      event:
+        title: 'Название'
+        address: 'Адрес'
+        datetime: 'Дата и время'
+        description: 'Описание'
+
+  controllers:
+    events:
+      created: 'Событие было успешно создано'
+      updated: 'Событие было успешно обновлено'
+      destroyed: 'Событие было удалено'
+    users:
+      updated: 'Вы обновили свой профиль'
+
+  devise:
+    passwords:
+      change_password: 'Изменить пароль'
+      forgot_password: 'Забыли пароль?'
+    registrations:
+      new: 'Регистрация'
+      edit: 'Смена пароля'
+    sessions:
+      new: 'Вход'
+
+  minimum_characters: '(минимум %{length} символов)'
+  delete_confirmation: 'Вы уверены?'
+
+  buttons:
+    restore_password: 'Восстановить пароль'
+    change_password: 'Изменить пароль'
+    log_up: 'Зарегистрироваться'
+    log_in: 'Войти'
+    log_out: 'Выйти'
+    profile: 'Профиль'
+    save: 'Сохранить'
+    back: 'Вернуться'
+    delete_account: 'Удалить аккаунт'
+
+  users:
+    edit: 'Редактирование профиля'
+    organized: 'Организовал:'
+    no_organized: 'Пользователь пока не организовал ни одного мероприятия'
+
+  events:
+    edit: 'Редактирование события'
+    index: 'События'
+    create: 'Создать событие'
+    new: 'Новое событие'
+
+  errors:
+    messages:
+      not_saved: 'Сохранение невозможно'
