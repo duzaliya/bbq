@@ -4,4 +4,10 @@
   <div class="col-6 mt-2">
     <%= render 'form', event: @event %>
   </div>
+
+  <div class="my-2">
+    <%= button_to t('buttons.delete_event'), event_path(@event), method: :delete,
+                data: { confirm: t('delete_confirmation') },
+                class: 'btn btn-danger' %>
+  </div>
 </div>
