@@ -11,10 +11,12 @@
       </div>
 
       <div class="mt-2">
-        <%= f.label :password, class: 'mb-1' %>
-        <% if @minimum_password_length %>
-          <em><%= t('minimum_characters', length: @minimum_password_length) %></em>
-        <% end %>
+        <label class="mb-1" for="user_password">
+          <%= resource.class.human_attribute_name(:password) %>
+          <% if @minimum_password_length %>
+            <em><%= t('minimum_characters', length: @minimum_password_length) %></em>
+          <% end %>
+        </label>
         <%= f.password_field :password, autofocus: true, autocomplete: 'new-password', class: 'form-control' %>
       </div>
 
