@@ -24,6 +24,14 @@ ru:
       destroyed: 'Событие было удалено'
     users:
       updated: 'Вы обновили свой профиль'
+    comments:
+      destroyed: 'Комментарий удален'
+      created: 'Ваш комментарий добавлен'
+      error: 'Ошибка с комментарием'
+    subscriptions:
+      created: 'Вы подписались на это событие'
+      destroyed: 'Участник отписан'
+      error: 'Подписка/отписка не сработала'
 
   devise:
     passwords:
@@ -49,17 +57,30 @@ ru:
     back: 'Вернуться'
     delete_account: 'Удалить аккаунт'
     delete_event: 'Удалить событие'
+    delete_comment: 'Удалить комментарий'
+    subscribe: 'Подписаться'
+    delete_subscription: 'Отменить подписку'
 
   users:
     edit: 'Редактирование профиля'
     organized: 'Организовал:'
     no_organized: 'Пользователь пока не организовал ни одного мероприятия'
+    will_go: 'Пойдут:'
 
   events:
     edit: 'Редактирование события'
     index: 'События'
     create: 'Создать событие'
     new: 'Новое событие'
+
+  comments:
+    body: 'Комментарий'
+    user_name: 'Ваше имя'
+
+  subscriptions:
+    user_email: 'Email'
+    user_name: 'Ваше имя'
+    and_me: 'И я пойду'
 
   error:
     one: '%{count} ошибки'
