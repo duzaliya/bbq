@@ -7,6 +7,7 @@ class Subscription < ApplicationRecord
 
   validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
+  validate :user_is_not_event_organizer
 
   def user_name
     if user.present?
@@ -21,6 +22,12 @@ class Subscription < ApplicationRecord
       user.email
     else
       super
+    end
+  end
+
+  def user_is_not_event_organizer
+    if user == event.user
+      errors.add(:user, I18n.t('subscriptions.unable_subscribe_to_self_event'))
     end
   end
 end

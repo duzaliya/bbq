@@ -81,6 +81,7 @@ ru:
     user_email: 'Email'
     user_name: 'Ваше имя'
     and_me: 'И я пойду'
+    unable_subscribe_to_self_event: 'Невозможно подписаться на свое событие'
 
   error:
     one: '%{count} ошибки'

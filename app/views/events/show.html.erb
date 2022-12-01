@@ -16,7 +16,7 @@
 
           <% if current_user_can_edit?(@event) %>
             <div class="my-2">
-              <%= link_to t('events.edit') , edit_event_path(@event),
+              <%= link_to t('events.edit'), edit_event_path(@event),
                           class: 'btn btn-primary' %>
             </div>
           <% end %>
@@ -28,7 +28,7 @@
   <div class="row">
     <div class="col-8">
       <div class="event-comments my-2">
-        <%= render partial: 'comments/form', locals: {comment: @new_comment || @event.comments.build} %>
+        <%= render partial: 'comments/form', locals: { comment: @new_comment || @event.comments.build } %>
         <div class="mt-2">
           <%= render partial: 'comments/comment', collection: @event.comments.except(@new_comment) %>
         </div>
@@ -49,14 +49,16 @@
           </p>
         </div>
       </div>
-      <div class="event-subscription-form">
-        <h4><%= t('subscriptions.and_me') %></h4>
-        <div>
-          <%= render partial: 'subscriptions/form', locals: {
-            subscription: @new_subscription || @event.subscriptions.build
-          } %>
+      <% unless current_user_can_edit?(@event) %>
+        <div class="event-subscription-form">
+          <h4><%= t('subscriptions.and_me') %></h4>
+          <div>
+            <%= render partial: 'subscriptions/form', locals: {
+              subscription: @new_subscription || @event.subscriptions.build
+            } %>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
