@@ -11,6 +11,12 @@
     <%= form.text_field :email, class: 'form-control' %>
   </div>
 
+  <div class="mt-2">
+    <%= form.label :avatar, class: 'mb-1' %>
+    <p><%= image_tag user_avatar(@user) if @user.avatar.attached? %></p>
+    <%= form.file_field :avatar %>
+  </div>
+
   <div class="actions mt-3">
     <%= form.submit t('buttons.save'), class: 'btn btn-primary' %>
     <%= link_to t('buttons.back'), :back, class: 'ms-2' %>

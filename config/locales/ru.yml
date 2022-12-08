@@ -3,6 +3,9 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      comment: 'Комментарий'
+      subscription: 'Подписка'
+      photo: 'Фотография'
 
     attributes:
       user:
@@ -16,6 +19,14 @@ ru:
         address: 'Адрес'
         datetime: 'Дата и время'
         description: 'Описание'
+      subscription:
+        user_name: 'Ваше имя'
+        user_email: 'Email'
+      comment:
+        user_name: 'Ваше имя'
+        body: 'Комментарий'
+      photo:
+        photo: 'Фотография'
 
   controllers:
     events:
@@ -32,6 +43,10 @@ ru:
       created: 'Вы подписались на это событие'
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
+    photos:
+      error: 'Что-то не так с фоткой'
+      created: 'Вы добавили фотографию к событию'
+      destroyed: 'Вы удалили фотку'
 
   devise:
     passwords:
@@ -60,6 +75,7 @@ ru:
     delete_comment: 'Удалить комментарий'
     subscribe: 'Подписаться'
     delete_subscription: 'Отменить подписку'
+    download: 'Загрузить'
 
   users:
     edit: 'Редактирование профиля'
@@ -73,16 +89,13 @@ ru:
     create: 'Создать событие'
     new: 'Новое событие'
 
-  comments:
-    body: 'Комментарий'
-    user_name: 'Ваше имя'
-
   subscriptions:
-    user_email: 'Email'
-    user_name: 'Ваше имя'
     and_me: 'И я пойду'
     unable_subscribe_to_self_event: 'Невозможно подписаться на свое событие'
     already_registered: 'уже зарегистрирован'
+
+  photos:
+    added: 'Добавил'
 
   error:
     one: '%{count} ошибки'
