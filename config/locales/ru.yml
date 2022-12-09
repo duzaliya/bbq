@@ -95,7 +95,7 @@ ru:
     already_registered: 'уже зарегистрирован'
 
   photos:
-    added: 'Добавил'
+    added: 'добавил(а)'
 
   error:
     one: '%{count} ошибки'
