@@ -7,6 +7,15 @@ ru:
       subscription: 'Подписка'
       photo: 'Фотография'
 
+    errors:
+      models:
+        subscription:
+          attributes:
+            user:
+              unable_subscribe_to_self_event: 'Невозможно подписаться на свое событие'
+            user_email:
+              already_registered: 'уже зарегистрирован'
+
     attributes:
       user:
         email: 'Email'
@@ -91,8 +100,6 @@ ru:
 
   subscriptions:
     and_me: 'И я пойду'
-    unable_subscribe_to_self_event: 'Невозможно подписаться на свое событие'
-    already_registered: 'уже зарегистрирован'
 
   photos:
     added: 'добавил(а)'
