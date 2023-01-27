@@ -111,3 +111,21 @@ ru:
 
   messages:
     not_saved: 'Не удалось сохранить из-за %{errors}'
+
+  event_mailer:
+    subscription:
+      new: 'Новая подписка на'
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    comment:
+      new: 'Новый комментарий @'
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
