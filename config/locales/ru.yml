@@ -28,6 +28,7 @@ ru:
         address: 'Адрес'
         datetime: 'Дата и время'
         description: 'Описание'
+        pincode: 'Пин-код доступа'
       subscription:
         user_name: 'Ваше имя'
         user_email: 'Email'
@@ -42,6 +43,7 @@ ru:
       created: 'Событие было успешно создано'
       updated: 'Событие было успешно обновлено'
       destroyed: 'Событие было удалено'
+      wrong_pincode: 'Неверный пин-код!'
     users:
       updated: 'Вы обновили свой профиль'
     comments:
@@ -69,6 +71,7 @@ ru:
 
   minimum_characters: '(минимум %{length} символов)'
   delete_confirmation: 'Вы уверены?'
+  pincode: 'Пин-код'
 
   buttons:
     restore_password: 'Восстановить пароль'
@@ -85,6 +88,7 @@ ru:
     subscribe: 'Подписаться'
     delete_subscription: 'Отменить подписку'
     download: 'Загрузить'
+    to_root: 'На главную'
 
   users:
     edit: 'Редактирование профиля'
@@ -97,6 +101,7 @@ ru:
     index: 'События'
     create: 'Создать событие'
     new: 'Новое событие'
+    need_pincode: 'Доступ только по пин-коду'
 
   subscriptions:
     and_me: 'И я пойду'
