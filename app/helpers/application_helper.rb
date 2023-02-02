@@ -1,9 +1,9 @@
 module ApplicationHelper
   def user_avatar(user)
     if user.avatar.attached?
-      user.avatar.variant(resize_to_fit: [200, 250])
+      user.avatar.variant(resize_to_fit: [200, 200])
     else
-      asset_path('cat.jpg')
+      asset_path('bbq.jpg')
     end
   end
 
@@ -11,7 +11,7 @@ module ApplicationHelper
     if user.avatar.attached?
       user.avatar.variant(resize_to_fill: [50, 50])
     else
-      asset_path('cat_thumb.jpg')
+      asset_path('bbq_thumb.jpg')
     end
   end
 

@@ -85,6 +85,7 @@ ru:
     delete_account: 'Удалить аккаунт'
     delete_event: 'Удалить событие'
     delete_comment: 'Удалить комментарий'
+    delete_photo: 'Удалить фотографию'
     subscribe: 'Подписаться'
     delete_subscription: 'Отменить подписку'
     download: 'Загрузить'
