@@ -1,24 +1,59 @@
-# README
+# BBQ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Приложение для организации мероприятий. Вы можете планировать события, подписываться на них, добавлять фотографии и писать комментарии. Местоположение удобно отслеживать через прикрепленную карту, а приватные вечеринки можно ограничивать с помощью пинкода. О новых участниках, обсуждениях и фото вы узнаете сразу, получив письмо на почту.
 
-Things you may want to cover:
+### Технологии, которые я использовала в проекте:
 
-* Ruby version
+* Регистрация и аутентификация - Device
 
-* System dependencies
+* Местоположение - API Яндекс Карт
 
-* Configuration
+* Хранение фотографий - ActiveStorage, Yandex Cloud Storage
 
-* Database creation
+* Галерея для фотографий - Lightbox2
 
-* Database initialization
+* Отправка писем - ActionMailer, Mailjet
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Для запуска:
 
-* Deployment instructions
+```
+Ruby 3.0.0
+Rails 6.1.7
+```
 
-* ...
+##### Склонируйте репозиторий
+
+```
+git clone https://github.com/duzaliya/bbq.git
+```
+
+##### Перейдите в папку bbq
+
+```
+cd bbq
+```
+
+##### Установите необходимые гемы командой
+
+```
+bundle install
+```
+
+##### Прогоните миграции
+
+```
+bundle exec rake db:migrate
+```
+
+##### Запустите игру локально
+
+```
+bundle exec rails s
+```
+
+Для корректной работы сторонних сервисов, использованных в приложении, необходимо обновить файл `credentials.yml.enc` командой:
+
+```
+EDITOR=nano rails credentials:edit
+```
