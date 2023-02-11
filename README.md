@@ -6,14 +6,13 @@
 
 * Регистрация и аутентификация - **Device**
 
-* Местоположение - [API Яндекс Карт](https://yandex.ru/dev/maps/?p=realty)
+* Адрес на карте - **[API Яндекс Карт](https://yandex.ru/dev/maps/?p=realty)**
 
-* Хранение фотографий - ActiveStorage, [Yandex Cloud Storage](https://cloud.yandex.ru/services/storage)
+* Хранение фотографий - **ActiveStorage**, **[Yandex Cloud Storage](https://cloud.yandex.ru/services/storage)**
 
-* Галерея для фотографий - [Lightbox2](https://lokeshdhakar.com/projects/lightbox2/)
+* Галерея для фотографий - **[Lightbox2](https://lokeshdhakar.com/projects/lightbox2/)**
 
-* Отправка писем - ActionMailer, [Mailjet](https://www.mailjet.com/)
-
+* Отправка писем - **ActionMailer**, **[Mailjet](https://www.mailjet.com/)**
 
 #### Для запуска:
 
@@ -21,37 +20,31 @@
 Ruby 3.0.0
 Rails 6.1.7
 ```
-
 ##### Склонируйте репозиторий
 
 ```
 git clone https://github.com/duzaliya/bbq.git
 ```
-
 ##### Перейдите в папку bbq
 
 ```
 cd bbq
 ```
-
 ##### Установите необходимые гемы командой
 
 ```
 bundle install
 ```
-
 ##### Прогоните миграции
 
 ```
 bundle exec rake db:migrate
 ```
-
 ##### Запустите игру локально
 
 ```
 bundle exec rails s
 ```
-
 Для корректной работы сторонних сервисов, использованных в приложении, необходимо обновить файл `credentials.yml.enc` командой:
 
 ```
