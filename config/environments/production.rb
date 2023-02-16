@@ -118,6 +118,6 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-  config.action_mailer.default_url_options = {  host: Rails.application.credentials.dig(:production, :host)  }
+  config.action_mailer.default_url_options = { from: 'dubbq.site', host: 'dubbq.site' }
   config.action_mailer.delivery_method = :mailjet
 end
