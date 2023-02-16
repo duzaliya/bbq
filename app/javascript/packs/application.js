@@ -7,7 +7,7 @@ import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'stylesheets/application'
-import 'lightbox.js'
+import 'event_lightbox.js'
 
 Rails.start()
 Turbolinks.start()
