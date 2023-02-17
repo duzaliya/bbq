@@ -5,48 +5,50 @@
 ### Технологии и инструменты, которые я использовала в проекте:
 
 * Регистрация и аутентификация - **Device**
-
-* Адрес на карте - **[API Яндекс Карт](https://yandex.ru/dev/maps/?p=realty)**
-
+* Отображение адреса на карте - **[API Яндекс Карт](https://yandex.ru/dev/maps/?p=realty)**
 * Хранение фотографий - **ActiveStorage**, **[Yandex Cloud Storage](https://cloud.yandex.ru/services/storage)**
-
 * Галерея для фотографий - **[Lightbox2](https://lokeshdhakar.com/projects/lightbox2/)**
-
 * Отправка писем - **ActionMailer**, **[Mailjet](https://www.mailjet.com/)**
 
-#### Для запуска:
-
-```
-Ruby 3.0.0
-Rails 6.1.7
-```
+#### Для запуска локально требуется:
+```Ruby 3.0.0
+Rails 6.1.7```
 ##### Склонируйте репозиторий
-
 ```
 git clone https://github.com/duzaliya/bbq.git
 ```
 ##### Перейдите в папку bbq
-
 ```
 cd bbq
 ```
 ##### Установите необходимые гемы командой
-
 ```
 bundle install
 ```
 ##### Прогоните миграции
-
 ```
 bundle exec rake db:migrate
 ```
-##### Запустите игру локально
+Для корректной работы сторонних сервисов, использованных в приложении, необходимо удалить старый и создать новый файл `credentials.yml.enc` командой:
+```
+rm -rf config/credentials.yml.enc
+EDITOR=<your_edit> rails credentials:edit
+```
+Заполните его своими API-ключами для каждого сервиса:
+```
+yc:
+  access_key_id: <your_key>
+  secret_access_key: <your_key>
 
+mailjet:
+  api_key: <your_key>
+  secret_key: <your_key>
+  sender: <your_sender_email>
+
+yandex_map:
+  api_key: <your_key>
+```
+##### Запустите игру локально
 ```
 bundle exec rails s
-```
-Для корректной работы сторонних сервисов, использованных в приложении, необходимо обновить файл `credentials.yml.enc` командой:
-
-```
-EDITOR=nano rails credentials:edit
 ```
