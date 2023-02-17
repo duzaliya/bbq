@@ -4,7 +4,7 @@
 
 ### Технологии и инструменты, которые я использовала в проекте:
 
-* Регистрация и аутентификация - **Device**
+* Регистрация и аутентификация - **Devise**
 * Отображение адреса на карте - **[API Яндекс Карт](https://yandex.ru/dev/maps/?p=realty)**
 * Хранение фотографий - **ActiveStorage**, **[Yandex Cloud Storage](https://cloud.yandex.ru/services/storage)**
 * Галерея для фотографий - **[Lightbox2](https://lokeshdhakar.com/projects/lightbox2/)**
