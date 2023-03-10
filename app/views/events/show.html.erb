@@ -28,7 +28,7 @@
   <div class="row">
     <div class="col-8">
       <div class="event-photos">
-        <div class="event-photos-gallery">
+        <div class="event-photos-gallery row">
           <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
         </div>
         <div class="event-photo-form">
@@ -77,5 +77,5 @@
   </div>
 </div>
 
-<%= javascript_pack_tag 'map' %>
-<%= javascript_pack_tag 'lightbox' %>
+<%= javascript_pack_tag 'lightbox-event' %>
+<%= javascript_pack_tag 'map', 'data-turbolinks-eval': false, defer: true %>

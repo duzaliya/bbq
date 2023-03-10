@@ -1,12 +1,14 @@
-<%= link_to (image_tag photo.photo.variant(resize_to_fit: [200, 200])), url_for(photo.photo),
-            data: { lightbox: 'photo-set', title:
-              "#{link_to(photo.user.name, user_path(photo.user))}
-              #{link_to(
-                bi_icon('trash'),
-                event_photo_path(photo.event, photo),
-                method: :delete,
-                title: t('buttons.delete_photo'),
-                data: { confirm: t('delete_confirmation') }
-              ) if current_user_can_edit?(photo)}"
-            }
-%>
+<div class="col-3 mb-2">
+  <% caption = "#{link_to photo.user.name, photo.user}
+  #{link_to(bi_icon('trash'),
+    event_photo_path(photo.event, photo),
+    method: :delete,
+    title: t('buttons.delete_photo'),
+    data: { confirm: t('delete_confirmation') }
+  ) if current_user_can_edit?(photo)}" %>
+
+  <a href="<%= url_for(photo.photo) %>" data-toggle="lightbox" data-gallery="photo-set" data-caption="<%= caption %>">
+    <img src="<%= url_for(photo.photo.variant(resize_to_fit: [200, 200])) %>"
+         alt="" class="img-fluid img-thumbnail">
+  </a>
+</div>
