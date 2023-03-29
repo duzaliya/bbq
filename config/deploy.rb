@@ -6,5 +6,5 @@ set :repo_url, 'git@github.com:duzaliya/bbq.git'
 set :branch, 'main'
 set :deploy_to, '/home/deploy/www'
 
-append :linked_files, 'config/master.key'
+append :linked_files, 'config/database.yml', 'config/master.key'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
